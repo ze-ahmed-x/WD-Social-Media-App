@@ -1,0 +1,40 @@
+#install basic package
+npm install express body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken mongoose
+#intialize node project
+npm init
+#if we add "type": "module" in package.json than we can write import statements instead of require; just a personal preference
+#MongoDB
+ahmed
+socialMedia123
+#added following in package.json
+"start": "node index.js",
+"dev": "nodemon index.js"
+#start backend server
+npm run dev
+#lucid charts can be used for creating charts: https://lucid.app/pricing/lucidchart?referer=https%3A%2F%2Flucid.app%2Fusers%2Flogin#/pricing/chart
+#MongoDB prefer to keep sub-docs whenever you can; only do refrals of IDs if you need to
+#Map is a type in MongoDB
+#if npx not install it can be install with the command npm i -g npx
+#install following packages on front end/ client side/ React
+-react-redux -> for state managment although now maybe its not required
+-@reduxjs/toolkit -> wrapper on redux; make it easy to use redux
+-redux-persist -> save value in local storage of browsers
+-react-dropzone -> handle file upload on front end to send it to backend
+-dotenv
+-formik -> for form handeling
+-yup -> for validation
+-react-router-dom@6 -> for handeling routes
+-@mui/material -> material ui for styling
+-@emotion/react
+-@emotion/styled
+-@mui/icons-material
+
+npm i react-redux @reduxjs/toolkit redux-persist react-dropzone dotenv formik yup react-router-dom@6 @mui/material @emotion/react @emotion/styled @mui/icons-material
+
+#Make a jsconfig.json -> when you import different files into other files; you can just start from source
+#index.js -> keep only App under context providers
+#app.js is the place where we do main coding/ routing etc
+# a particular issue resolved with this: https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
+
+
+
