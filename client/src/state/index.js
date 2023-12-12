@@ -7,7 +7,7 @@ const initialState = {
     posts: []
 };
 
-export const AuthSlice = createSlice({
+export const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
@@ -47,6 +47,6 @@ export const AuthSlice = createSlice({
 })
 
 //now in order to export and expose these reducer funtions:-
-const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } = AuthSlice.actions;
+export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } = authSlice.actions;
 
-export default AuthSlice.reducer;
+export default authSlice.reducer;
