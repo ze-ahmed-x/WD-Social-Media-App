@@ -15,7 +15,9 @@ import { themeSettings } from "theme";
 function App() {
   // grab the mode of redux state
   const mode = useSelector((state) => state.mode);
-  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+  const isAuth = Boolean(useSelector((state) => state.token));
+
 
 
   return (
@@ -24,9 +26,9 @@ function App() {
         <ThemeProvider theme={theme} >
           <CssBaseLine />
           <Routes>
-            <Route path="/" element={<LoginPage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/porfile/:userId" element={<ProfilePage />} />
+            <Route path="/" element={ isAuth? <Navigate to = "/home" /> :  <LoginPage />} />
+            <Route path="/home" element={ isAuth? <HomePage /> : <Navigate to = "/" />} />
+            <Route path="/porfile/:userId" element={ isAuth? <ProfilePage /> : <Navigate to = "/" />} />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>
